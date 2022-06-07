@@ -1,0 +1,265 @@
+Unity Editor version:    2021.3.3f1 (af2e63e8f9bd)
+Branch:                  2021.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 12.4 (Build 21F79)
+Darwin version:          21.5.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2021.3.3f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+/Users/alexbaklanov/Projects/ColorMix 2
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+58664
+Successfully changed project path to: /Users/alexbaklanov/Projects/ColorMix 2
+/Users/alexbaklanov/Projects/ColorMix 2
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 67.37 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.3f1 (af2e63e8f9bd)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.3f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/alexbaklanov/Projects/ColorMix 2/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M1 Pro (high power)
+Metal devices available: 1
+0: Apple M1 Pro (high power)
+Using device Apple M1 Pro (high power)
+Initializing Metal device caps: Apple M1 Pro
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.3f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.3f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.3f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56844
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.3f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.3f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.3f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Registered in 0.000524 seconds.
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 73.76 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.428 seconds
+Domain Reload Profiling:
+	ReloadAssembly (428ms)
+		BeginReloadAssembly (51ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (314ms)
+			LoadAssemblies (52ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (68ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (19ms)
+			SetupLoadedEditorAssemblies (200ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (52ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (74ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (48ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001741 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/alexbaklanov/Projects/ColorMix 2/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/alexbaklanov/Projects/ColorMix 2/Library/PackageCache/com.unity.visualscripting@1.7.6/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.093 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1093ms)
+		BeginReloadAssembly (213ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (122ms)
+		EndReloadAssembly (732ms)
+			LoadAssemblies (175ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (186ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (329ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (118ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (57ms)
+				ProcessInitializeOnLoadAttributes (138ms)
+				ProcessInitializeOnLoadMethodAttributes (16ms)
+				AfterProcessingInitializeOnLoad (1ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (2ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.3f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3362 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (97.2 KB). Loaded Objects now: 3824.
+Memory consumption went from 229.4 MB to 229.3 MB.
+Total: 2.482375 ms (FindLiveObjects: 0.122458 ms CreateObjectMapping: 0.039542 ms MarkObjects: 2.237167 ms  DeleteObjects: 0.082458 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1010920.421415 seconds.
+  path: Assets/Models/bottle.blend
+  artifactKey: Guid(9f291f6b83f45432da40b120860b85a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/bottle.blend using Guid(9f291f6b83f45432da40b120860b85a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69a593013aaf3137c1316f4e7ca39943') in 0.155788 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 49.887252 seconds.
+  path: Assets/Prefabs/UI/tutorial/finger.mat
+  artifactKey: Guid(c7ec81c8ae4274248a79dc19f6ebf014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/UI/tutorial/finger.mat using Guid(c7ec81c8ae4274248a79dc19f6ebf014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dbb8a7e17a2af070385e4653193d98c') in 0.158132 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Font/Cloudy With a Chance of Love.ttf
+  artifactKey: Guid(4fe3655154a155a48bf693f46782e8ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/Cloudy With a Chance of Love.ttf using Guid(4fe3655154a155a48bf693f46782e8ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd467d1e676a1c5651332ae58b644d931') in 1.646733 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Font/Cloudy With a Chance of Love.ttf
+  artifactKey: Guid(4fe3655154a155a48bf693f46782e8ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/Cloudy With a Chance of Love.ttf using Guid(4fe3655154a155a48bf693f46782e8ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6fcef6f8b8b47b6a31160f0844ef323') in 0.015372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Font/Cocon-Bold-Font.otf
+  artifactKey: Guid(9d1e7f34ba59041a3b2d459b60de1df1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/Cocon-Bold-Font.otf using Guid(9d1e7f34ba59041a3b2d459b60de1df1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f8ea5de26af39a7caa4c078b9f3701a') in 0.044704 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Font/Roboto-Thin.ttf
+  artifactKey: Guid(0f4a7cbad552e4c0b8d52764a9adf5b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/Roboto-Thin.ttf using Guid(0f4a7cbad552e4c0b8d52764a9adf5b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '549e30231606d60bfbb42587798d1fcc') in 0.012836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Font/PoetsenOne-Regular.ttf
+  artifactKey: Guid(d9c513f6982864f57bc42c914922ef4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/PoetsenOne-Regular.ttf using Guid(d9c513f6982864f57bc42c914922ef4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3a11d95d2f170428745e54844aa812e') in 0.007100 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Font/Roboto-Light.ttf
+  artifactKey: Guid(72f9181c514e34df78af8f19230bfb41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/Roboto-Light.ttf using Guid(72f9181c514e34df78af8f19230bfb41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd40283825d565457783a6aaded71dc60') in 0.007343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Font/Roboto-Black.ttf
+  artifactKey: Guid(e9999b1197165456fa0da84ee0ec7bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/Roboto-Black.ttf using Guid(e9999b1197165456fa0da84ee0ec7bf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c062c5df0acb8624c1bf1b9bf9e1769') in 0.007207 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Font/Roboto-ThinItalic.ttf
+  artifactKey: Guid(bc18c6ac7bb00461c8bcc2fcea020096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/Roboto-ThinItalic.ttf using Guid(bc18c6ac7bb00461c8bcc2fcea020096) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b081e56227dec572251a0906da54b6d') in 0.007110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Font/Roboto-Bold.ttf
+  artifactKey: Guid(0ca0e0545cb544a1cb89a7750a65fb5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/Roboto-Bold.ttf using Guid(0ca0e0545cb544a1cb89a7750a65fb5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4541f2cfb249761335ff7da65066dc4d') in 0.006434 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Font/Roboto-BoldItalic.ttf
+  artifactKey: Guid(cb2050915c1f34f858c5bc3fa26b8756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/Roboto-BoldItalic.ttf using Guid(cb2050915c1f34f858c5bc3fa26b8756) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06f39c47d6df90764af35cd8f74289b8') in 0.006350 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Font/Roboto-Regular.ttf
+  artifactKey: Guid(35cae79e561d742fda99f58faae796b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/Roboto-Regular.ttf using Guid(35cae79e561d742fda99f58faae796b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77e9b4eadbea2329447e4bd02486d7ec') in 0.007346 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Font/Roboto-MediumItalic.ttf
+  artifactKey: Guid(cd978d25c308b4741a5a4fc70caf955e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Font/Roboto-MediumItalic.ttf using Guid(cd978d25c308b4741a5a4fc70caf955e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43c2195cc849c951d38b767e771be5de') in 0.007593 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Effects/juiceParticle.mat
+  artifactKey: Guid(13efbae1c441f4fc0941a7cd7948e8fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Effects/juiceParticle.mat using Guid(13efbae1c441f4fc0941a7cd7948e8fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a13b609f330f317c73420ac15277e9f') in 0.004930 seconds 
