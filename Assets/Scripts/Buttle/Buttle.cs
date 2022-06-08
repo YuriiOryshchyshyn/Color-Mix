@@ -16,13 +16,17 @@ public class Buttle : MonoBehaviour
     private List<Paint> _notPaintedPaints;
     private Paint _currentPaint;
     private Paint _currentNotPaint;
-    private PrimeColor _currentPrimeColor;
     private bool _isFull = false;
     private bool _isEmpty = false;
 
     public Paint CurrentNotPaint => _currentNotPaint;
     public bool IsFull => _isFull;
     public bool IsEmpty => _isEmpty;
+
+    private void Awake()
+    {
+        LocalInit();
+    }
 
     public void TryMoveUpAnimation()
     {
@@ -35,10 +39,15 @@ public class Buttle : MonoBehaviour
     public void Init(PrimerController primeContoller)
     {
         _primeController = primeContoller;
+        LocalInit();
+    }
+
+    private void LocalInit()
+    {
         _paintedPaints = _paints.Where(paint => paint.IsPainted).ToList();
         _notPaintedPaints = _paints.Where(paint => paint.IsPainted == false).ToList();
     }
-    
+
     public void TryMoveDownAnimation()
     {
         if (!_isChoosedButtle)
@@ -50,6 +59,7 @@ public class Buttle : MonoBehaviour
     public void PrimeColor(Buttle buttle)
     {
         Reload();
+        buttle.Reload();
         IEnumerator primeColorCoroutine = PrimeColorCoroutine(buttle);
         StartCoroutine(primeColorCoroutine);
     }
@@ -62,31 +72,49 @@ public class Buttle : MonoBehaviour
 
     private IEnumerator PrimeColorCoroutine(Buttle buttle)
     {
-        Vector3 originScale = _currentPaint.transform.localScale;
-        Vector3 targetScale = new Vector3(_currentPaint.transform.localScale.x, _currentPaint.transform.localScale.y, 0);
-        float lerpValue = 0;
-        buttle.Reload();
-        buttle.CurrentNotPaint.SetMaterial(_currentPaint.Renderer.material);
-        buttle.CurrentNotPaint.transform.localScale = new Vector3(100, 100, 0);
-        float originalScaleZ = buttle.CurrentNotPaint.transform.localScale.z;
-
-        while (_currentPaint.transform.localScale != targetScale)
+        if (_currentPaint.Color != buttle._currentPaint.Color)
         {
-            _currentPaint.transform.localScale = Vector3.Lerp(originScale, targetScale, lerpValue);
-            buttle.Prime(originalScaleZ, lerpValue);
-            lerpValue += _primeSpeed * Time.deltaTime;
+            TryMoveDownAnimation();
+            _primeController.SetEmptyButtles();
             yield return null;
         }
+        else
+        {
+            Vector3 originScale = _currentPaint.transform.localScale;
+            Vector3 targetScale = new Vector3(_currentPaint.transform.localScale.x, _currentPaint.transform.localScale.y, 0);
+            float lerpValue = 0;
+            buttle.Reload();
+            buttle.CurrentNotPaint.SetMaterial(_currentPaint.Renderer.material);
+            buttle.CurrentNotPaint.transform.localScale = new Vector3(100, 100, 0);
+            float originalScaleZ = buttle.CurrentNotPaint.transform.localScale.z;
+            Color lastPaintColor = _currentPaint.Color;
 
-        _currentPaint.SetTransparentMaterial();
-        _currentPaint.transform.localScale = originScale;
-        _paintedPaints.Remove(_currentPaint);
-        _notPaintedPaints.Add(_currentPaint);
-        buttle.AddPaint();
-        _primeController.SetEmptyButtles();
-        Reload();
+            while (_currentPaint.transform.localScale != targetScale)
+            {
+                _currentPaint.transform.localScale = Vector3.Lerp(originScale, targetScale, lerpValue);
+                buttle.Prime(originalScaleZ, lerpValue);
+                lerpValue += _primeSpeed * Time.deltaTime;
+                yield return null;
+            }
 
-        TryMoveDownAnimation();
+            _currentPaint.SetTransparentMaterial();
+            _currentPaint.transform.localScale = originScale;
+            _paintedPaints.Remove(_currentPaint);
+            _notPaintedPaints.Add(_currentPaint);
+            buttle.AddPaint();
+            buttle.Reload();
+            _primeController.SetEmptyButtles();
+            Reload();
+
+            if (_currentPaint.Color == lastPaintColor && buttle._notPaintedPaints.Count > 0)
+            {
+                StartCoroutine(PrimeColorCoroutine(buttle));
+            }
+            else
+            {
+                TryMoveDownAnimation();
+            }
+        }
     }
 
     private void Reload()
