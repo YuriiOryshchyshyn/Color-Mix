@@ -94,7 +94,6 @@ public class PrimeBottle : MonoBehaviour
         {
             _currentPaint.transform.localScale = Vector3.Lerp(originScale, targetScale, lerpValue);
             buttle.Prime(originalScaleZ, lerpValue);
-            buttle.ColorLerp(_currentPaint, lerpValue);
             lerpValue += _primeSpeed * Time.deltaTime;
             yield return null;
         }

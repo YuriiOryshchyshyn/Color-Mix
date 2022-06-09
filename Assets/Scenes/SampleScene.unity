@@ -269,67 +269,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _touchController: {fileID: 115721398}
---- !u!1001 &606851644
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1800159428}
-    m_Modifications:
-    - target: {fileID: 298246592633940621, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_Name
-      value: bottle
-      objectReference: {fileID: 0}
-    - target: {fileID: 298246592633940621, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2c486a7f698ac4aa112945713f611b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buttleTemplate: {fileID: 4818841631828694962, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
+  _buttleTemplate: {fileID: 6753576651482896731, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
   _buttlesCount: 4
   _buttlesOffset: 3
   _startButtlePosition: {x: -10, y: 0, z: 2}
@@ -556,8 +495,7 @@ Transform:
   m_LocalPosition: {x: 3.8, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2093437708}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -595,8 +533,3 @@ MonoBehaviour:
       - _material: {fileID: 2100000, guid: 9056e1b48b44e43a988c805a73239494, type: 2}
       - _material: {fileID: 2100000, guid: 9056e1b48b44e43a988c805a73239494, type: 2}
       - _material: {fileID: 2100000, guid: 9056e1b48b44e43a988c805a73239494, type: 2}
---- !u!4 &2093437708 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}
-  m_PrefabInstance: {fileID: 606851644}
-  m_PrefabAsset: {fileID: 0}
