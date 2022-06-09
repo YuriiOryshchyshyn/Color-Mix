@@ -476,8 +476,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 60
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 18
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -518,6 +518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1800159428}
   - component: {fileID: 1800159427}
+  - component: {fileID: 1800159429}
   m_Layer: 0
   m_Name: Bottles
   m_TagString: Untagged
@@ -543,6 +544,7 @@ MonoBehaviour:
   _startButtlePosition: {x: -10, y: 0, z: 2}
   _buttleParent: {fileID: 1800159428}
   _primeController: {fileID: 503198614}
+  _bottleLevels: {fileID: 1800159429}
 --- !u!4 &1800159428
 Transform:
   m_ObjectHideFlags: 0
@@ -559,6 +561,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1800159429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800159426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1def4408d837dac4cb391dbfaa0dddac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - _buttles:
+    - _paintsModels:
+      - _material: {fileID: 2100000, guid: dd259acf784f1495e81d08d2c17492ee, type: 2}
+      - _material: {fileID: 2100000, guid: 80b3037ca5a4d44e4bbaaaccf0151e6b, type: 2}
+      - _material: {fileID: 2100000, guid: 667d610c2b4264c8796210e601d4dd96, type: 2}
+      - _material: {fileID: 2100000, guid: 9056e1b48b44e43a988c805a73239494, type: 2}
+    - _paintsModels:
+      - _material: {fileID: 2100000, guid: 80b3037ca5a4d44e4bbaaaccf0151e6b, type: 2}
+      - _material: {fileID: 2100000, guid: dd259acf784f1495e81d08d2c17492ee, type: 2}
+      - _material: {fileID: 2100000, guid: 9056e1b48b44e43a988c805a73239494, type: 2}
+      - _material: {fileID: 2100000, guid: 9056e1b48b44e43a988c805a73239494, type: 2}
+    - _paintsModels:
+      - _material: {fileID: 2100000, guid: 80b3037ca5a4d44e4bbaaaccf0151e6b, type: 2}
+      - _material: {fileID: 2100000, guid: 667d610c2b4264c8796210e601d4dd96, type: 2}
+      - _material: {fileID: 2100000, guid: 9056e1b48b44e43a988c805a73239494, type: 2}
+      - _material: {fileID: 2100000, guid: 9056e1b48b44e43a988c805a73239494, type: 2}
+    - _paintsModels:
+      - _material: {fileID: 2100000, guid: 80b3037ca5a4d44e4bbaaaccf0151e6b, type: 2}
+      - _material: {fileID: 2100000, guid: 9056e1b48b44e43a988c805a73239494, type: 2}
+      - _material: {fileID: 2100000, guid: 9056e1b48b44e43a988c805a73239494, type: 2}
+      - _material: {fileID: 2100000, guid: 9056e1b48b44e43a988c805a73239494, type: 2}
 --- !u!4 &2093437708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 298246592633940626, guid: b17a080966a9341b89360e4822ca92fe, type: 3}

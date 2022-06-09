@@ -8,11 +8,13 @@ public class SpawnButtles : MonoBehaviour
     [SerializeField] private Vector3 _startButtlePosition;
     [SerializeField] private Transform _buttleParent;
     [SerializeField] private PrimerController _primeController;
+    [SerializeField] private BottleLevels _bottleLevels;
 
     private void Start()
     {
         Vector3 startSpawnPosition = _startButtlePosition;
-        
+        Level currentLevel = _bottleLevels.Levels[0];
+
         for (int i = 0; i < _buttlesCount; i++)
         {
             Buttle buttle = Instantiate(_buttleTemplate, _buttleParent);
@@ -20,7 +22,7 @@ public class SpawnButtles : MonoBehaviour
             startSpawnPosition = new Vector3(startSpawnPosition.x + buttle.transform.localScale.x + _buttlesOffset,
                 startSpawnPosition.y,
                 startSpawnPosition.z);
-            buttle.Init(_primeController);
+            buttle.Init(_primeController, currentLevel.Buttles[i]);
         }
     }
 }

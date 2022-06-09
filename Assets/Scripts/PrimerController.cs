@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PrimerController : MonoBehaviour
@@ -6,6 +7,8 @@ public class PrimerController : MonoBehaviour
 
     private Buttle _firstButtle;
     private Buttle _secondButtle;
+
+    private bool _inPrimeProcess;
 
     private void OnEnable()
     {
@@ -19,11 +22,16 @@ public class PrimerController : MonoBehaviour
 
     private void OnPointerButtleClick(Buttle buttle)
     {
+        if (_inPrimeProcess)
+            return;
+
         if (_firstButtle == null)
         {
             _firstButtle = buttle;
+            _firstButtle.EndPrimeProcess += OnPrimeEnded;
             if (_firstButtle.IsEmpty)
             {
+                _firstButtle.EndPrimeProcess -= OnPrimeEnded;
                 SetEmptyButtles();
             }
             else
@@ -34,16 +42,26 @@ public class PrimerController : MonoBehaviour
         else
         {
             _secondButtle = buttle;
-            if (_secondButtle.IsFull)
+            _secondButtle.EndPrimeProcess += OnPrimeEnded;
+            if (_secondButtle.IsFull || _firstButtle == _secondButtle)
             {
                 _firstButtle.TryMoveDownAnimation();
+                OnPrimeEnded(_firstButtle, _secondButtle);
                 SetEmptyButtles();
             }
             else
             {
                 PrimeColor(_firstButtle, _secondButtle);
+                _inPrimeProcess = true;
             }
         }
+    }
+
+    private void OnPrimeEnded(Buttle firstButtle, Buttle secondButtle)
+    {
+        _inPrimeProcess = false;
+        firstButtle.EndPrimeProcess -= OnPrimeEnded;
+        secondButtle.EndPrimeProcess -= OnPrimeEnded;
     }
 
     private void PrimeColor(Buttle firstButtle, Buttle secondButtle)

@@ -3,6 +3,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.Events;
 
 public class Buttle : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Buttle : MonoBehaviour
     private Paint _currentNotPaint;
     private bool _isFull = false;
     private bool _isEmpty = false;
+
+    public event UnityAction<Buttle, Buttle> EndPrimeProcess;
 
     public Paint CurrentNotPaint => _currentNotPaint;
     public bool IsFull => _isFull;
@@ -36,9 +39,13 @@ public class Buttle : MonoBehaviour
         _isChoosedButtle = true;
     }
 
-    public void Init(PrimerController primeContoller)
+    public void Init(PrimerController primeContoller, ButtleModel bottleModel)
     {
         _primeController = primeContoller;
+        for (int i = 0; i < bottleModel.PaintsModels.Count; i++)
+        {
+            _paints[i].SetMaterial(bottleModel.PaintsModels[i].Material);
+        }
         LocalInit();
     }
 
@@ -46,6 +53,7 @@ public class Buttle : MonoBehaviour
     {
         _paintedPaints = _paints.Where(paint => paint.IsPainted).ToList();
         _notPaintedPaints = _paints.Where(paint => paint.IsPainted == false).ToList();
+        _notPaintedPaints.Reverse();
     }
 
     public void TryMoveDownAnimation()
@@ -72,7 +80,7 @@ public class Buttle : MonoBehaviour
 
     private IEnumerator PrimeColorCoroutine(Buttle buttle)
     {
-        if (_currentPaint.Color != buttle._currentPaint.Color)
+        if (_currentPaint.Color != buttle._currentPaint.Color && !buttle.IsEmpty)
         {
             TryMoveDownAnimation();
             _primeController.SetEmptyButtles();
@@ -113,6 +121,7 @@ public class Buttle : MonoBehaviour
             else
             {
                 TryMoveDownAnimation();
+                EndPrimeProcess?.Invoke(this, buttle);
             }
         }
     }
