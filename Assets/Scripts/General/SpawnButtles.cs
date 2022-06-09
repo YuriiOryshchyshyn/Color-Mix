@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpawnButtles : MonoBehaviour
 {
-    [SerializeField] private Buttle _buttleTemplate;
+    [SerializeField] private PrimeBottle _buttleTemplate;
     [SerializeField] private int _buttlesCount;
     [SerializeField] private float _buttlesOffset;
     [SerializeField] private Vector3 _startButtlePosition;
@@ -17,7 +17,7 @@ public class SpawnButtles : MonoBehaviour
 
         for (int i = 0; i < _buttlesCount; i++)
         {
-            Buttle buttle = Instantiate(_buttleTemplate, _buttleParent);
+            PrimeBottle buttle = Instantiate(_buttleTemplate, _buttleParent);
             buttle.transform.localPosition = startSpawnPosition;
             startSpawnPosition = new Vector3(startSpawnPosition.x + buttle.transform.localScale.x + _buttlesOffset,
                 startSpawnPosition.y,

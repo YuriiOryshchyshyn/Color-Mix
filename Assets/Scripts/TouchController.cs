@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class TouchController : MonoBehaviour
 {
-    public event UnityAction<Buttle> PointerOnButtle;
+    public event UnityAction<PrimeBottle> PointerOnButtle;
 
     private void Update()
     {
@@ -18,7 +18,7 @@ public class TouchController : MonoBehaviour
 
     private void Hit(RaycastHit hit)
     {
-        if (hit.transform.TryGetComponent(out Buttle buttle))
+        if (hit.transform.TryGetComponent(out PrimeBottle buttle))
         {
             PointerOnButtle?.Invoke(buttle);
         }

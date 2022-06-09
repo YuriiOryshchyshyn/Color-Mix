@@ -9,7 +9,7 @@ public class Paint : MonoBehaviour
     private MeshRenderer _meshRenderer;
 
     public bool IsPainted { get => GetComponent<MeshRenderer>().material.color.a != 0; }
-    public Color Color => _meshRenderer.material.color;
+    public Color Color { get => _meshRenderer.material.color; set => _meshRenderer.material.color = value; }
     public MeshRenderer Renderer => _meshRenderer;
 
     private void Awake()

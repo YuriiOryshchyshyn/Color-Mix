@@ -1,12 +1,11 @@
-using System;
 using UnityEngine;
 
 public class PrimerController : MonoBehaviour
 {
     [SerializeField] private TouchController _touchController;
 
-    private Buttle _firstButtle;
-    private Buttle _secondButtle;
+    private PrimeBottle _firstButtle;
+    private PrimeBottle _secondButtle;
 
     private bool _inPrimeProcess;
 
@@ -20,7 +19,7 @@ public class PrimerController : MonoBehaviour
         _touchController.PointerOnButtle -= OnPointerButtleClick;
     }
 
-    private void OnPointerButtleClick(Buttle buttle)
+    private void OnPointerButtleClick(PrimeBottle buttle)
     {
         if (_inPrimeProcess)
             return;
@@ -57,14 +56,14 @@ public class PrimerController : MonoBehaviour
         }
     }
 
-    private void OnPrimeEnded(Buttle firstButtle, Buttle secondButtle)
+    private void OnPrimeEnded(PrimeBottle firstButtle, PrimeBottle secondButtle)
     {
         _inPrimeProcess = false;
         firstButtle.EndPrimeProcess -= OnPrimeEnded;
         secondButtle.EndPrimeProcess -= OnPrimeEnded;
     }
 
-    private void PrimeColor(Buttle firstButtle, Buttle secondButtle)
+    private void PrimeColor(PrimeBottle firstButtle, PrimeBottle secondButtle)
     {
         firstButtle.PrimeColor(secondButtle);
     }

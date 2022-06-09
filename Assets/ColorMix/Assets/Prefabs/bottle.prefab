@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 298246592633940626}
-  - component: {fileID: 4818841631828694962}
   - component: {fileID: 560635691724394518}
+  - component: {fileID: 6753576651482896731}
   m_Layer: 0
   m_Name: bottle
   m_TagString: Untagged
@@ -34,25 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4818841631828694962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298246592633940621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4023a287c2311c488758e521abd5084, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animationUpOffset: 2
-  _paints:
-  - {fileID: 3847016372133231584}
-  - {fileID: 8083921456580885538}
-  - {fileID: 6101675030127293330}
-  - {fileID: 3415793508288522171}
-  _primeSpeed: 3
 --- !u!136 &560635691724394518
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -67,6 +48,25 @@ CapsuleCollider:
   m_Height: 6.1658635
   m_Direction: 1
   m_Center: {x: -0.0035042763, y: 2.8798788, z: 0.013401628}
+--- !u!114 &6753576651482896731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298246592633940621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 755f2cbd4689df846a092f6fa5c08fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animationUpOffset: 2
+  _paints:
+  - {fileID: 3847016372133231584}
+  - {fileID: 8083921456580885538}
+  - {fileID: 6101675030127293330}
+  - {fileID: 3415793508288522171}
+  _primeSpeed: 4
 --- !u!1001 &1602712403933745469
 PrefabInstance:
   m_ObjectHideFlags: 0
